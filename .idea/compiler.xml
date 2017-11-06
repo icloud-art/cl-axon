@@ -8,11 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cl-axon" />
         <module name="lesson-1" />
+        <module name="lesson-2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cl-axon" target="1.8" />
       <module name="lesson-1" target="1.8" />
+      <module name="lesson-2" target="1.8" />
+      <module name="lesson-3" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

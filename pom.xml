@@ -11,15 +11,23 @@
 	<name>cl-axon</name>
 	<description>Demo project for Spring Boot</description>
 
+	<!--<parent>-->
+		<!--<groupId>org.springframework.boot</groupId>-->
+		<!--<artifactId>spring-boot-starter-parent</artifactId>-->
+		<!--<version>1.5.8.RELEASE</version>-->
+		<!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+	<!--</parent>-->
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.8.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>1.5.2.RELEASE</version>
 	</parent>
+
 
 	<modules>
 		<module>lesson-1</module>
+		<module>lesson-2</module>
 	</modules>
 
 	<properties>
