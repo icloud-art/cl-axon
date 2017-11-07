@@ -13,10 +13,10 @@ import java.math.BigDecimal;
 import org.axonframework.eventhandling.EventHandler;
 import org.axonframework.spring.stereotype.Aggregate;
 import org.slf4j.Logger;
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import static org.axonframework.commandhandling.model.AggregateLifecycle.apply;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -32,19 +32,8 @@ public class BankAccount {
     private String accountName;
     private BigDecimal balance;
 
-    @Id
-    public String getAccountId(){
-        return accountId.toString();
-    }
-
-    @Column
-    public String getAccountName(){
-        return accountName;
-    }
-
-    @Column
-    public BigDecimal getBalance(){
-        return balance;
+    public BankAccount(){
+        super();
     }
 
     @CommandHandler
@@ -75,6 +64,33 @@ public class BankAccount {
             this.balance = result;
             LOGGER.info("Withdraw {} from account {},balance result:{}",event.getAmount(),accountId,balance);
         }
+    }
+
+    @Id
+    public String getAccountId(){
+        return accountId.toString();
+    }
+
+    public void setAccountId(String accountId) {
+        this.accountId = new AccountId(accountId);
+    }
+
+    @Column
+    public String getAccountName(){
+        return accountName;
+    }
+
+    public void setAccountName(String accountName) {
+        this.accountName = accountName;
+    }
+
+    @Column
+    public BigDecimal getBalance(){
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 }
 
