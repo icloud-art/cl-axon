@@ -1,14 +1,14 @@
-package com.charles.lesson2;
+package com.charles.lesson3;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"com.charles.*"})
-public class Lesson2Application {
+@ComponentScan({"com.charles"})
+public class Lesson3Application {
+
 	public static void main(String[] args) {
-		SpringApplication.run(Lesson2Application.class, args);
+		SpringApplication.run(Lesson3Application.class, args);
 	}
 }
