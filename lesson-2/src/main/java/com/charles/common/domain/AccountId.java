@@ -5,18 +5,19 @@ import org.axonframework.common.IdentifierFactory;
 
 import java.io.Serializable;
 
-public class AccountId implements Serializable {
+public class AccountId implements Serializable{
     private static final long serialVersionUID = 7119961474083133148L;
     private final String identifier;
 
     private final int hashCode;
-    public AccountId(){
+
+    public AccountId() {
         this.identifier = IdentifierFactory.getInstance().generateIdentifier();
         this.hashCode = identifier.hashCode();
     }
 
     public AccountId(String identifier) {
-        Assert.notNull(identifier,()->"Identifier may not be null");
+        Assert.notNull(identifier, ()->"Identifier may not be null");
         this.identifier = identifier;
         this.hashCode = identifier.hashCode();
     }
@@ -24,14 +25,16 @@ public class AccountId implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass())return false;
+        if (o == null || getClass() != o.getClass()) return false;
 
         AccountId accountId = (AccountId) o;
+
         return identifier.equals(accountId.identifier);
+
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return hashCode;
     }
 

@@ -16,6 +16,7 @@ import org.axonframework.messaging.interceptors.TransactionManagingInterceptor;
 import org.axonframework.monitoring.NoOpMessageMonitor;
 import org.axonframework.spring.config.EnableAxon;
 import org.axonframework.spring.messaging.unitofwork.SpringTransactionManager;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,18 +27,18 @@ import static org.slf4j.LoggerFactory.getLogger;
 @Configuration
 @EnableAxon
 public class JpaConfig {
-    private static final org.slf4j.Logger LOGGER = getLogger(JpaConfig.class);
+    private static final Logger LOGGER = getLogger(JpaConfig.class);
 
     @Autowired
     private PlatformTransactionManager transactionManager;
 
     @Bean
-    public EventStorageEngine eventStorageEngine() {
+    public EventStorageEngine eventStorageEngine(){
         return new InMemoryEventStorageEngine();
     }
 
     @Bean
-    public TransactionManager axonTransactionManager(){
+    public TransactionManager axonTransactionManager() {
         return new SpringTransactionManager(transactionManager);
     }
 
@@ -47,9 +48,9 @@ public class JpaConfig {
     }
 
     @Bean
-    public CommandBus commandBus(){
-        SimpleCommandBus commandBus = new SimpleCommandBus(axonTransactionManager(),
-                NoOpMessageMonitor.INSTANCE);
+    public CommandBus commandBus() {
+        SimpleCommandBus commandBus = new SimpleCommandBus(axonTransactionManager(), NoOpMessageMonitor.INSTANCE);
+        //commandBus.registerHandlerInterceptor(transactionManagingInterceptor());
         return commandBus;
     }
 
@@ -59,27 +60,12 @@ public class JpaConfig {
     }
 
     @Bean
-    public EntityManagerProvider entityManagerProvider(){
+    public EntityManagerProvider entityManagerProvider() {
         return new ContainerManagedEntityManagerProvider();
     }
 
     @Bean
     public Repository<BankAccount> accountRepository(){
-        return new GenericJpaRepository<BankAccount>(entityManagerProvider(),BankAccount.class,eventBus());
+        return new GenericJpaRepository<BankAccount>(entityManagerProvider(),BankAccount.class, eventBus());
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

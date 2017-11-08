@@ -8,6 +8,7 @@ public class WithdrawMoneyCommand {
     private AccountId accountId;
     private long amount;
 
+
     public WithdrawMoneyCommand(AccountId accountId, long amount) {
         this.accountId = accountId;
         this.amount = amount;
