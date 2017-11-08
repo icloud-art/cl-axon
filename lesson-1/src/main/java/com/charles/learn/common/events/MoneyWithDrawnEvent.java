@@ -1,12 +1,12 @@
-package com.charles.common.events;
+package com.charles.learn.common.events;
 
-import com.charles.common.domain.AccountId;
+import com.charles.learn.common.domain.AccountId;
 
-public class MoneyWithdrawnEvent {
+public class MoneyWithDrawnEvent {
     private AccountId accountId;
     private long amount;
 
-    public MoneyWithdrawnEvent(AccountId accountId, long amount) {
+    public  MoneyWithDrawnEvent(AccountId accountId, long amount) {
         this.accountId = accountId;
         this.amount = amount;
     }

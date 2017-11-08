@@ -1,6 +1,6 @@
-package com.charles.command.commands;
+package com.charles.learn.command.commands;
 
-import com.charles.common.domain.AccountId;
+import com.charles.learn.common.domain.AccountId;
 import org.axonframework.commandhandling.TargetAggregateIdentifier;
 
 public class WithdrawMoneyCommand {

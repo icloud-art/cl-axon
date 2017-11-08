@@ -1,8 +1,8 @@
-package com.charles.command.controller;
+package com.charles.learn.command.controller;
 
-import com.charles.command.commands.CreateAccountCommand;
-import com.charles.command.commands.WithdrawMoneyCommand;
-import com.charles.common.domain.AccountId;
+import com.charles.learn.command.commands.CreateAccountCommand;
+import com.charles.learn.command.commands.WithdrawMoneyCommand;
+import com.charles.learn.common.domain.AccountId;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

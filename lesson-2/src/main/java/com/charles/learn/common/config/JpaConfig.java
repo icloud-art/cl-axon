@@ -1,6 +1,6 @@
-package com.charles.common.config;
+package com.charles.learn.common.config;
 
-import com.charles.command.aggregates.BankAccount;
+import com.charles.learn.command.aggregates.BankAccount;
 import org.axonframework.commandhandling.CommandBus;
 import org.axonframework.commandhandling.SimpleCommandBus;
 import org.axonframework.commandhandling.model.GenericJpaRepository;

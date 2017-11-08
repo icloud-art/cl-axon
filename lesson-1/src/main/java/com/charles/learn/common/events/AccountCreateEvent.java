@@ -1,13 +1,14 @@
-package com.charles.common.events;
+package com.charles.learn.common.events;
 
-import com.charles.common.domain.AccountId;
+import com.charles.learn.common.domain.AccountId;
 
-public class AccountCreatedEvent {
+public class AccountCreateEvent {
+
     private AccountId accountId;
     private String accountName;
     private long amount;
 
-    public AccountCreatedEvent(AccountId accountId, String accountName, long amount) {
+    public AccountCreateEvent(AccountId accountId, String accountName, long amount) {
         this.accountId = accountId;
         this.accountName = accountName;
         this.amount = amount;

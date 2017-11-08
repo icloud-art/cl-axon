@@ -1,10 +1,10 @@
-package com.charles.command.aggregates;
+package com.charles.learn.command.aggregates;
 
-import com.charles.command.commands.CreateAccountCommand;
-import com.charles.command.commands.WithdrawMoneyCommand;
-import com.charles.common.domain.AccountId;
-import com.charles.common.events.AccountCreateEvent;
-import com.charles.common.events.MoneyWithDrawnEvent;
+import com.charles.learn.command.commands.CreateAccountCommand;
+import com.charles.learn.command.commands.WithdrawMoneyCommand;
+import com.charles.learn.common.domain.AccountId;
+import com.charles.learn.common.events.AccountCreateEvent;
+import com.charles.learn.common.events.MoneyWithDrawnEvent;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.commandhandling.model.AggregateIdentifier;
 

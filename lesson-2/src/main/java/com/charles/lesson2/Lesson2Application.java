@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"com.charles"})
+@ComponentScan({"com.charles.learn"})
 public class Lesson2Application {
 
 	public static void main(String[] args) {

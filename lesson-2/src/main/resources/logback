@@ -12,6 +12,6 @@
         <appender-ref ref="STDOUT" />
     </root>
 
-    <logger name="com.charles" level="debug" />
+    <logger name="com.charles.learn" level="debug" />
     <logger name="org.axonframework" level="info" />
 </configuration>

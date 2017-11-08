@@ -1,9 +1,9 @@
 package com.charles.lesson1;
 
-import com.charles.command.aggregates.BankAccount;
-import com.charles.command.commands.CreateAccountCommand;
-import com.charles.command.commands.WithdrawMoneyCommand;
-import com.charles.common.domain.AccountId;
+import com.charles.learn.command.aggregates.BankAccount;
+import com.charles.learn.command.commands.CreateAccountCommand;
+import com.charles.learn.command.commands.WithdrawMoneyCommand;
+import com.charles.learn.common.domain.AccountId;
 import org.axonframework.config.Configuration;
 import org.axonframework.config.DefaultConfigurer;
 import org.axonframework.eventsourcing.eventstore.inmemory.InMemoryEventStorageEngine;
