@@ -18,7 +18,9 @@ import org.axonframework.spring.config.EnableAxon;
 import org.axonframework.spring.messaging.unitofwork.SpringTransactionManager;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
 
@@ -26,6 +28,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 
 @Configuration
 @EnableAxon
+@EntityScan("com.charles")
 public class JpaConfig {
     private static final Logger LOGGER = getLogger(JpaConfig.class);
 

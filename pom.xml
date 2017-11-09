@@ -18,8 +18,8 @@
 	<modules>
 		<module>lesson-1</module>
 		<module>lesson-2</module>
-		<!--<module>lesson-3</module>-->
-		<!--<module>lesson-4</module>-->
+		<module>lesson-3</module>
+		<module>lesson-4</module>
 		<!--<module>lesson-5</module>-->
 		<!--<module>lesson-6</module>-->
 		<!--<module>jpa-test</module>-->
@@ -50,8 +50,6 @@
 		<artifactId>spring-boot-starter-test</artifactId>
 		<scope>test</scope>
 		</dependency>
-
-
 
 		<dependency>
 			<groupId>org.axonframework</groupId>

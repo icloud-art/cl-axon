@@ -1,4 +1,4 @@
-package com.charles.command.controller;
+package com.charles.controller;
 
 import com.charles.command.commands.CreateAccountCommand;
 import com.charles.command.commands.WithdrawMoneyCommand;
