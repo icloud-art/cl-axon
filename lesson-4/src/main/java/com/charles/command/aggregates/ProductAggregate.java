@@ -32,6 +32,45 @@ public class ProductAggregate {
 
     @EventHandler
     public void on(ProductCreatedEvent event) {
-        this.id =
+        this.id = event.getId();
+        this.name = event.getName();
+        this.price = event.getPrice();
+        this.stock = event.getStock();
+        LOGGER.debug("Product [{}] {} {} * {} is created.",id,name,price,stock);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public long getPrice() {
+        return price;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

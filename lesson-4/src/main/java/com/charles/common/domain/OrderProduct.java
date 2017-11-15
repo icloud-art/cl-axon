@@ -1,16 +1,16 @@
-package com.charles.common.events;
+package com.charles.common.domain;
 
-public class ProductCreatedEvent {
+public class OrderProduct {
     private String id;
     private String name;
     private long price;
-    private int stock;
+    private int amount;
 
-    public ProductCreatedEvent(String id,String name,long price,int stock) {
+    public OrderProduct(String id,String name,long price,int amount) {
         this.id = id;
         this.name = name;
         this.price = price;
-        this.stock = stock;
+        this.amount = amount;
     }
 
     public String getId() {
@@ -25,7 +25,10 @@ public class ProductCreatedEvent {
         return price;
     }
 
-    public int getStock() {
-        return stock;
+    public int getAmount() {
+        return amount;
     }
 }
+
+
+
